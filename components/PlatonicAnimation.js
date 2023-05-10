@@ -1,8 +1,7 @@
 import React, { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Icosahedron, Octahedron, Tetrahedron, Dodecahedron, Box } from '@react-three/drei';
 import AnimatedText from './AnimatedText';
-import * as THREE from 'three'
+import * as THREE from 'three';
 
 const MorphingPlatonicSolid = () => {
   const meshRef = useRef();
@@ -31,15 +30,21 @@ const MorphingPlatonicSolid = () => {
     meshRef.current.rotation.x = elapsedTime * 0.5;
     meshRef.current.rotation.y = elapsedTime * 0.5;
 
+    if (!meshRef.current.morphTargetInfluences) {
+      meshRef.current.morphTargetInfluences = new Array(geometries.length).fill(0);
+    }
+
     geometries.forEach((_, index) => {
       meshRef.current.morphTargetInfluences[index] = Math.sin(elapsedTime + index) * 0.5 + 0.5;
     });
   });
 
   return (
-    <mesh ref={meshRef} geometry={createMorphGeometry()} material={new THREE.MeshStandardMaterial({ morphTargets: true })}>
-      <primitive object={new THREE.Mesh(new THREE.BufferGeometry(), new THREE.MeshStandardMaterial({ color: 'white' }))} />
-    </mesh>
+    <mesh
+      ref={meshRef}
+      geometry={createMorphGeometry()}
+      material={new THREE.MeshStandardMaterial({ morphTargets: true, color: 'white' })}
+    />
   );
 };
 

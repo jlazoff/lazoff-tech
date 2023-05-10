@@ -1,10 +1,9 @@
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
 import { motion } from 'framer-motion'
 import PlatonicAnimation from '../components/PlatonicAnimation'
 import Head from 'next/head'
 
-const inter = Inter({ subsets: ['latin'] })
+
 
 export default function HomePage() {
   return (
@@ -20,7 +19,6 @@ export default function HomePage() {
           <PlatonicAnimation />
         </motion.div>
       </div>
-
     </div>
   )
 }
