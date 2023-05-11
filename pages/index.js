@@ -41,17 +41,32 @@ export default function Index() {
   };
 
   return (
-    <div
-      className="flex flex-col items-center justify-center min-h-screen bg-gray-100"
-      onClick={handleBackgroundClick}
-    >
+    <div className="flex flex-col items-center justify-center min-h-screen bg-black">
+      <div className="grid w-64 h-64 grid-cols-10 grid-rows-10">
+        {Array.from({ length: 100 }, (_, index) => (
+          <div
+            key={index}
+            className={`bg-white ${
+              index % 2 === 0 ? 'bg-opacity-25' : 'bg-opacity-50'
+            }`}
+          ></div>
+        ))}
+      </div>
+
       <div
         className={`w-64 h-64 bg-blue-500 rounded-lg transition duration-500 ${
           isShapeTouched ? 'shape-animation' : ''
         }`}
         onClick={handleShapeClick}
       >
-        <div className={`shape ${shapeType}`}></div>
+        <div className={`shape ${shapeType}`}>
+          <div className="face face-1"></div>
+          <div className="face face-2"></div>
+          <div className="face face-3"></div>
+          <div className="face face-4"></div>
+          <div className="face face-5"></div>
+          <div className="face face-6"></div>
+        </div>
       </div>
 
       {isCardVisible && (
@@ -77,4 +92,3 @@ export default function Index() {
       )}
     </div>
   );
-}
