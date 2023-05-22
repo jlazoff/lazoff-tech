@@ -22,7 +22,7 @@ export default function App() {
         </a>
         <br />
         <a href="mailto:Joshua@Lazoff.Tech" target="_blank" rel="">
-          Joshua@Lazoff.Tech
+        <em>Joshua</em><span style="display:none">foo</span><strong>&#64;</strong>Lazoff&#46;<em>Tech</em>
         </a>
         <br />
         <a href="https://lazofftech.com" target="_blank" rel=" ">
