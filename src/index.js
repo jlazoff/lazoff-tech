@@ -2,18 +2,17 @@ import { createRoot } from 'react-dom/client'
 import './styles.css'
 import App from './App'
 import { Leva } from 'leva'
-import { Logo } from '@pmndrs/branding'
 
 function Overlay() {
   return (
     <div style={{ position: 'absolute', top: 0, left: 0, pointerEvents: 'none', width: '100%', height: '100%' }}>
-      <a href="https://pmnd.rs/" style={{ position: 'absolute', bottom: 40, left: 90, fontSize: '13px' }}>
-        pmnd.rs
+      <a href="https://lazofftech.com" style={{ position: 'absolute', bottom: 40, left: 90, fontSize: '13px' }}>
+        Lazoff.Tech
         <br />
-        dev collective
+         - 🥷
       </a>
-      <div style={{ position: 'absolute', top: 40, left: 40, fontSize: '13px' }}>😄 —</div>
-      <div style={{ position: 'absolute', bottom: 40, right: 40, fontSize: '13px' }}>30/10/2022</div>
+      <div style={{ position: 'absolute', top: 40, left: 40, fontSize: '13px' }}>- ♾♾ 😄 ♾♾ 🥷 ♾♾ —</div>
+      <div style={{ position: 'absolute', bottom: 40, right: 40, fontSize: '13px' }}>May 21, 2024</div>
     </div>
   )
 }
@@ -21,8 +20,7 @@ function Overlay() {
 createRoot(document.getElementById('root')).render(
   <>
     <App />
-
-    <Logo style={{ position: 'absolute', bottom: 40, left: 40, width: 30 }} />
+    <img src="https://joshualazoff.com/wp-content/uploads/2020/06/interact-Icon150x150.png" alt="Lazoff.Tech's Logo" style={{ position: 'absolute', bottom: 40, left: 40, width: 30 }} />
     <Leva collapsed />
   </>
 )

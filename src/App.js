@@ -1,6 +1,6 @@
-import { useState, useTransition } from 'react'
+import { React, useRef, useState, useTransition } from 'react'
 import { useControls } from 'leva'
-import { Canvas } from '@react-three/fiber'
+import { Canvas, useFrame } from '@react-three/fiber'
 import { Html, AccumulativeShadows, RandomizedLight, Center, Environment, OrbitControls } from '@react-three/drei'
 
 export default function App() {
@@ -14,19 +14,19 @@ export default function App() {
           </AccumulativeShadows>
         </group>
         <Env />
-        <OrbitControls autoRotate autoRotateSpeed={4} enablePan={false} enableZoom={false} minPolarAngle={Math.PI / 2.1} maxPolarAngle={Math.PI / 2.1} />
+        <OrbitControls autoRotate autoRotateSpeed={3} enablePan={false} enableZoom={false} minPolarAngle={Math.PI / 2.1} maxPolarAngle={Math.PI / 2.1} />
       </Canvas>
-      <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
-        <a href="https://lazoff.tech/" target="_blank" rel="noopener noreferrer">
+      <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', color: 'white !important' }}>
+        <a href="https://lazoff.tech/" target="_blank" rel=" ">
           Lazoff.Tech
         </a>
         <br />
-        <a href="mailto:Joshua@Lazoff.Tech" target="_blank" rel="noopener noreferrer">
+        <a href="mailto:Joshua@Lazoff.Tech" target="_blank" rel="">
           Joshua@Lazoff.Tech
         </a>
         <br />
-        <a href="https://lazofftech.com" target="_blank" rel="noopener noreferrer">
-          lazofftech.com
+        <a href="https://lazofftech.com" target="_blank" rel=" ">
+          LazoffTech.com
         </a>
       </div>
     </>
@@ -35,18 +35,47 @@ export default function App() {
 
 function Sphere() {
   const { roughness } = useControls({ roughness: { value: 0, min: 0, max: 1 } })
+  const meshRef = useRef()
+  const rippleRef = useRef()
+  const [isHovered, setIsHovered] = useState(false)
+  const [isTouched, setIsTouched] = useState(false)
+
+  useFrame((state, delta) => {
+    if (isHovered || isTouched) {
+      meshRef.current.rotation.x += delta * 4
+      meshRef.current.rotation.y += delta * 4
+    }
+  })
+
+  const handleClick = (event) => {
+    const { offsetX, offsetY } = event.nativeEvent
+    if (rippleRef.current) {
+      rippleRef.current.createRipple(offsetX, offsetY)
+    }
+  }
+
   return (
     <Center top>
-      <mesh castShadow>
+      <mesh
+        ref={meshRef}
+        castShadow
+        onPointerOver={() => setIsHovered(true)}
+        onPointerOut={() => setIsHovered(false)}
+        onPointerDown={() => setIsTouched(true)}
+        onPointerUp={() => setIsTouched(false)}
+        onClick={handleClick}
+      >
         <sphereGeometry args={[0.75, 64, 64]} />
-        <meshStandardMaterial metalness={1} roughness={roughness} />
+        <meshStandardMaterial metalness={1} roughness={roughness} hovered={isHovered} />
       </mesh>
     </Center>
   )
 }
 
 function Env() {
-  const [preset, setPreset] = useState('sunset')
+  const allOptions = ['sunset', 'dawn', 'night', 'warehouse', 'forest', 'apartment', 'studio', 'city', 'park', 'lobby']
+  const randomScene = allOptions[Math.floor(Math.random() * allOptions.length)]
+  const [preset, setPreset] = useState(randomScene)
   // You can use the "inTransition" boolean to react to the loading in-between state,
   // For instance by showing a message
   const [inTransition, startTransition] = useTransition()
@@ -54,7 +83,7 @@ function Env() {
     blur: { value: 0.00, min: 0, max: 1 },
     preset: {
       value: preset,
-      options: ['sunset', 'dawn', 'night', 'warehouse', 'forest', 'apartment', 'studio', 'city', 'park', 'lobby'],
+      options: allOptions,
       // If onChange is present the value will not be reactive, see https://github.com/pmndrs/leva/blob/main/docs/advanced/controlled-inputs.md#onchange
       // Instead we transition the preset value, which will prevents the suspense bound from triggering its fallback
       // That way we can hang onto the current environment until the new one has finished loading ...
