@@ -3,7 +3,18 @@ import { useControls } from 'leva'
 import { Canvas } from '@react-three/fiber'
 import { Html, AccumulativeShadows, RandomizedLight, Center, Environment, OrbitControls } from '@react-three/drei'
 
+function obfuscateEmail(email) {
+  let obfuscatedEmail = '';
+  for (let i = 0; i < email.length; i++) {
+    obfuscatedEmail += `&#${email.charCodeAt(i)};`;
+  }
+  return obfuscatedEmail;
+}
+
 export default function App() {
+
+  const email = 'Joshua@Lazoff.Tech';
+  const obfuscatedEmail = obfuscateEmail(email);
   return (
     <>
       <Canvas shadows camera={{ position: [0, 0, 4.5], fov: 50 }}>
@@ -21,9 +32,9 @@ export default function App() {
           Lazoff.Tech
         </a>
         <br />
-        <a href="mailto:Joshua@Lazoff.Tech" target="_blank" rel="noopener noreferrer">
-          Joshua@Lazoff.Tech
-        </a>
+        <div>
+          <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer" dangerouslySetInnerHTML={{ __html: obfuscatedEmail }}></a>
+        </div>
         <br />
         <a href="https://lazofftech.com" target="_blank" rel="noopener noreferrer">
           lazofftech.com
