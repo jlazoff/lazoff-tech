@@ -16,7 +16,7 @@ export default function App() {
           </AccumulativeShadows>
         </group>
         <Env />
-        <OrbitControls autoRotate autoRotateSpeed={4} enablePan={false} enableZoom={false} minPolarAngle={Math.PI / 2.1} maxPolarAngle={Math.PI / 2.1} />
+        <OrbitControls autoRotate autoRotateSpeed={3} enablePan={false} enableZoom={false} minPolarAngle={Math.PI / 2.1} maxPolarAngle={Math.PI / 2.1} />
       </Canvas>
       <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
         <a href="https://lazoff.tech/" target="_blank" rel="noopener noreferrer">

@@ -16,6 +16,7 @@ function Overlay() {
 createRoot(document.getElementById('root')).render(
   <>
     <App />
+    <Overlay />
     <Leva collapsed />
   </>
 )
