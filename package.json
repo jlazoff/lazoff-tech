@@ -1,4 +1,4 @@
- {
+{
   "name": "lazofftech-website",
   "version": "1.0.0",
   "description": "",
@@ -26,4 +26,5 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]}
+  ]
+}
