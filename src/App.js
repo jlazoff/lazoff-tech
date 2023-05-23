@@ -4,6 +4,8 @@ import { Canvas } from '@react-three/fiber'
 import { Html, AccumulativeShadows, RandomizedLight, Center, Environment, OrbitControls } from '@react-three/drei'
 
 export default function App() {
+  const email = 'Joshua@Lazoff.Tech';
+  const obfuscatedEmail = obfuscateEmail(email);
   return (
     <>
       <Canvas shadows camera={{ position: [0, 0, 4.5], fov: 50 }}>
@@ -20,17 +22,23 @@ export default function App() {
         <a href="https://lazoff.tech/" target="_blank" rel="noopener noreferrer">
           Lazoff.Tech
         </a>
-        <br />
-        <a href="mailto:Joshua@Lazoff.Tech" target="_blank" rel="noopener noreferrer">
-          Joshua@Lazoff.Tech
-        </a>
-        <br />
+        <div>
+          <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer" dangerouslySetInnerHTML={{ __html: obfuscatedEmail }}></a>
+        </div>
         <a href="https://lazofftech.com" target="_blank" rel="noopener noreferrer">
           lazofftech.com
         </a>
       </div>
     </>
   )
+}
+
+function obfuscateEmail(email) {
+  let obfuscatedEmail = '';
+  for (let i = 0; i < email.length; i++) {
+    obfuscatedEmail += `&#${email.charCodeAt(i)};`;
+  }
+  return obfuscatedEmail;
 }
 
 function Sphere() {
