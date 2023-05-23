@@ -18,15 +18,20 @@ export default function App() {
         <Env />
         <OrbitControls autoRotate autoRotateSpeed={3} enablePan={false} enableZoom={false} minPolarAngle={Math.PI / 2.1} maxPolarAngle={Math.PI / 2.1} />
       </Canvas>
-      <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
+
+      <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', cursor: 'pointer' }}>
         <a href="https://lazoff.tech/" target="_blank" rel="noopener noreferrer">
-          Lazoff.Tech
+          <span role="img" aria-label="computer" style={{ fontSize: '30px', marginRight: '10px', animation: 'bounce 1s infinite' }}>💻</span>
+          <span style={{ display: 'inline-block', position: 'relative', animation: 'slide-in 1s forwards' }}>Visit Lazoff.Tech</span>
         </a>
-        <div>
+        <div style={{ cursor: 'pointer' }}  >
+          <span role="img" aria-label="email" style={{ fontSize: '30px', marginRight: '10px', animation: 'bounce 1s infinite' }}>📧</span>
           <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer" dangerouslySetInnerHTML={{ __html: obfuscatedEmail }}></a>
         </div>
-        <a href="https://lazofftech.com" target="_blank" rel="noopener noreferrer">
-          lazofftech.com
+
+        <a href="https://joshualazoff.com" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', cursor: 'pointer', color: 'black', display: 'inline-block', position: 'relative' }}>
+          <span role="img" aria-label="globe" style={{ fontSize: '30px', marginRight: '10px', animation: 'bounce 1s infinite' }}>🌐</span>
+          <span style={{ display: 'inline-block', position: 'relative', animation: 'slide-in 1s forwards' }}>Meet Joshua Lazoff</span>
         </a>
       </div>
     </>
