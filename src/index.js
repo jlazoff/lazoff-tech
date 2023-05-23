@@ -11,6 +11,9 @@ function Overlay() {
         <br />
         - 🥷
       </a>
+      <a href="https://lazofftech.com" style={{ position: 'absolute', bottom: 40, left: 90, fontSize: '13px' }}>
+        <div style={{ position: 'absolute', top: 40, left: 40, fontSize: '13px' }}>- ♾♾ 😄 ♾♾ 🥷 ♾♾ —</div>
+      </a>
       <div style={{ position: 'absolute', bottom: 40, right: 40, fontSize: '13px' }}>Made May 21, 2024</div>
     </div>
   )
@@ -19,6 +22,8 @@ function Overlay() {
 createRoot(document.getElementById('root')).render(
   <>
     <App />
+    {/*  <img src="https://joshualazoff.com/wp-content/uploads/2020/06/interact-Icon150x150.png" alt="Lazoff.Tech's Logo" style={{ position: 'absolute', bottom: 40, left: 40, width: 30 }} />
+   */}
     <Leva collapsed />
   </>
 )
