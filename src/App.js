@@ -4,7 +4,7 @@ import { Canvas } from '@react-three/fiber'
 import { Html, AccumulativeShadows, RandomizedLight, Center, Environment, OrbitControls } from '@react-three/drei'
 
 export default function App() {
-  const email = 'Joshua@Lazoff.Tech';
+  const email = 'joshua@lazoff.tech';
   const obfuscatedEmail = obfuscateEmail(email);
   return (
     <>
@@ -20,30 +20,22 @@ export default function App() {
       </Canvas>
 
       <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', cursor: 'pointer' }}>
-        <a href="https://lazoff.tech/" target="_blank" rel="noopener noreferrer">
+        <a href="https://lazoff.tech/" target="_blank" rel="noopener noreferrer" style={{ transform: 'scale(1.1)' }}>
           <span role="img" aria-label="computer" style={{ fontSize: '30px', marginRight: '10px', animation: 'bounce 1s infinite' }}>💻</span>
           <span style={{ display: 'inline-block', position: 'relative', animation: 'slide-in 1s forwards' }}>Visit Lazoff.Tech</span>
         </a>
-        <div style={{ cursor: 'pointer' }}  >
+        <div style={{ cursor: 'pointer', transform: 'scale(1.1)' }}  >
           <span role="img" aria-label="email" style={{ fontSize: '30px', marginRight: '10px', animation: 'bounce 1s infinite' }}>📧</span>
           <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer" dangerouslySetInnerHTML={{ __html: obfuscatedEmail }}></a>
         </div>
 
-        <a href="https://joshualazoff.com" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', cursor: 'pointer', color: 'black', display: 'inline-block', position: 'relative' }}>
+        <a href="https://joshualazoff.com/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', transform: 'scale(1.1)', cursor: 'pointer', color: 'black', display: 'inline-block', position: 'relative' }}>
           <span role="img" aria-label="globe" style={{ fontSize: '30px', marginRight: '10px', animation: 'bounce 1s infinite' }}>🌐</span>
           <span style={{ display: 'inline-block', position: 'relative', animation: 'slide-in 1s forwards' }}>Meet Joshua Lazoff</span>
         </a>
       </div>
     </>
   )
-}
-
-function obfuscateEmail(email) {
-  let obfuscatedEmail = '';
-  for (let i = 0; i < email.length; i++) {
-    obfuscatedEmail += `&#${email.charCodeAt(i)};`;
-  }
-  return obfuscatedEmail;
 }
 
 function Sphere() {
@@ -56,6 +48,14 @@ function Sphere() {
       </mesh>
     </Center>
   )
+}
+
+function obfuscateEmail(email) {
+  let obfuscatedEmail = '';
+  for (let i = 0; i < email.length; i++) {
+    obfuscatedEmail += `&#${email.charCodeAt(i)};`;
+  }
+  return obfuscatedEmail;
 }
 
 function Env() {

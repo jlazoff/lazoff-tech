@@ -23,6 +23,10 @@ body {
   color: black;
 }
 
+a:hover {
+  transform: scale(1.1);
+}
+
 a {
   pointer-events: all;
   color: black;
