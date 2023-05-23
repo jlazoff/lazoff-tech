@@ -21,8 +21,8 @@ export default function App() {
           Lazoff.Tech
         </a>
         <br />
-        <a href="&#109;ail&#116;o&#58;J%6F%73%68&#117;a&#64;Laz&#111;&#102;f&#46;&#84;e&#99;h" target="_blank" rel="">
-        <em>J&#111;shua&#64;</em><span style="display:none">foo</span><strong>&#64;</strong>Lazoff&#46;<em>T&#101;ch</em>
+        <a href="mailto:Joshua@Lazoff.Tech" target="_blank" rel="">
+        <em>Joshua</em><span style="display:none">foo</span><strong>&#64;</strong>Lazoff&#46;<em>Tech</em>
         </a>
         <br />
         <a href="https://lazofftech.com" target="_blank" rel=" ">
