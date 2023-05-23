@@ -34,7 +34,7 @@ export default function App() {
 }
 
 function Sphere() {
-  const { roughness } = useControls({ roughness: { value: 1, min: 0, max: 1 } })
+  const { roughness } = useControls({ roughness: { value: 0.00, min: 0, max: 1 } })
   return (
     <Center top>
       <mesh castShadow>
@@ -51,7 +51,7 @@ function Env() {
   // For instance by showing a message
   const [inTransition, startTransition] = useTransition()
   const { blur } = useControls({
-    blur: { value: 0.65, min: 0, max: 1 },
+    blur: { value: 0.10, min: 0, max: 1 },
     preset: {
       value: preset,
       options: ['sunset', 'dawn', 'night', 'warehouse', 'forest', 'apartment', 'studio', 'city', 'park', 'lobby'],
