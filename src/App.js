@@ -16,9 +16,11 @@ export default function App() {
           </AccumulativeShadows>
         </group>
         <Env />
-        <OrbitControls autoRotate autoRotateSpeed={3} enablePan={false} enableZoom={false} minPolarAngle={Math.PI / 2.1} maxPolarAngle={Math.PI / 2.1} />
+        <OrbitControls autoRotate autoRotateSpeed={3} enablePan={true} enableZoom={true} minPolarAngle={Math.PI / 2.1} maxPolarAngle={Math.PI / 2.1} />
       </Canvas>
-
+      <div>
+        <button onClick={() => setPreset(scenes[Math.floor(Math.random() * scenes.length)])}>Random Scene</button>
+      </div>
       <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', cursor: 'pointer' }}>
         <a href="https://lazoff.tech/" target="_blank" rel="noopener noreferrer" style={{ transform: 'scale(1.1)' }}>
           <span role="img" aria-label="computer" style={{ fontSize: '30px', marginRight: '10px', animation: 'bounce 1s infinite' }}>💻</span>
@@ -59,7 +61,8 @@ function obfuscateEmail(email) {
 }
 
 function Env() {
-  const [preset, setPreset] = useState('sunset')
+  const scenes = ['sunset', 'dawn', 'night', 'forest', 'park']
+  const [preset, setPreset] = useState(scenes[Math.floor(Math.random() * scenes.length)]);
   // You can use the "inTransition" boolean to react to the loading in-between state,
   // For instance by showing a message
   const [inTransition, startTransition] = useTransition()
@@ -67,12 +70,17 @@ function Env() {
     blur: { value: 0, min: 0, max: 1 },
     preset: {
       value: preset,
-      options: ['sunset', 'dawn', 'night', 'warehouse', 'forest', 'apartment', 'studio', 'city', 'park', 'lobby'],
+      options: ['sunset', 'dawn', 'night', 'forest', 'park'],
+      // options: ['sunset', 'dawn', 'night', 'warehouse', 'forest', 'apartment', 'studio', 'city', 'park', 'lobby'],
       // If onChange is present the value will not be reactive, see https://github.com/pmndrs/leva/blob/main/docs/advanced/controlled-inputs.md#onchange
       // Instead we transition the preset value, which will prevents the suspense bound from triggering its fallback
       // That way we can hang onto the current environment until the new one has finished loading ...
       onChange: (value) => startTransition(() => setPreset(value))
     }
   })
-  return <Environment preset={preset} background blur={blur} />
+  return (
+
+    <Environment preset={preset} background blur={blur} />
+
+  )
 }
