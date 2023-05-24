@@ -58,7 +58,7 @@ function obfuscateEmail(email) {
 }
 
 function Env() {
-  const scenes = ['sunset', 'dawn', 'park']
+  const scenes = ['sunset', 'park']
   const [preset, setPreset] = useState(scenes[Math.floor(Math.random() * scenes.length)]);
   // You can use the "inTransition" boolean to react to the loading in-between state,
   // For instance by showing a message
