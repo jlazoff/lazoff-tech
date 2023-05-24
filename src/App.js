@@ -41,7 +41,7 @@ export default function App() {
 }
 
 function Sphere() {
-  const { roughness } = useControls({ roughness: { value: 0, min: 0, max: 1 } })
+  const { roughness } = useControls({ roughness: { value: 0.18, min: 0, max: 0.36 } })
   return (
     <Center top>
       <mesh castShadow>
@@ -67,10 +67,10 @@ function Env() {
   // For instance by showing a message
   const [inTransition, startTransition] = useTransition()
   const { blur } = useControls({
-    blur: { value: 0, min: 0, max: 1 },
+    blur: { value: Math.floor(Math.random()*0.02) , min: 0, max: 0.05 },
     preset: {
       value: preset,
-      options: ['sunset', 'dawn', 'night', 'forest', 'park'],
+      options: ['sunset', 'dawn',  'forest', 'park'],
       // options: ['sunset', 'dawn', 'night', 'warehouse', 'forest', 'apartment', 'studio', 'city', 'park', 'lobby'],
       // If onChange is present the value will not be reactive, see https://github.com/pmndrs/leva/blob/main/docs/advanced/controlled-inputs.md#onchange
       // Instead we transition the preset value, which will prevents the suspense bound from triggering its fallback
