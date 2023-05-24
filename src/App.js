@@ -2,7 +2,7 @@ import { useState, useTransition } from 'react'
 import { useControls } from 'leva'
 import { Canvas } from '@react-three/fiber'
 import { Html, AccumulativeShadows, RandomizedLight, Center, Environment, OrbitControls } from '@react-three/drei'
-
+//minPolarAngle={Math.PI / 2.1} maxPolarAngle={Math.PI / 2.1}
 export default function App() {
   const email = 'joshua@lazoff.tech';
   const obfuscatedEmail = obfuscateEmail(email);
@@ -16,7 +16,7 @@ export default function App() {
           </AccumulativeShadows>
         </group>
         <Env />
-        <OrbitControls autoRotate autoRotateSpeed={3} enablePan={true} enableZoom={true} minPolarAngle={Math.PI / 2.1} maxPolarAngle={Math.PI / 2.1} />
+        <OrbitControls autoRotate autoRotateSpeed={2} enablePan={true} enableZoom={true}  />
       </Canvas>
       <div>
         <button onClick={() => setPreset(scenes[Math.floor(Math.random() * scenes.length)])}>Random Scene</button>
@@ -70,7 +70,7 @@ function Env() {
     blur: { value: Math.floor(Math.random()*0.02) , min: 0, max: 0.05 },
     preset: {
       value: preset,
-      options: ['sunset', 'dawn',  'forest', 'park'],
+      options: ['sunset', 'dawn',   'park'],
       // options: ['sunset', 'dawn', 'night', 'warehouse', 'forest', 'apartment', 'studio', 'city', 'park', 'lobby'],
       // If onChange is present the value will not be reactive, see https://github.com/pmndrs/leva/blob/main/docs/advanced/controlled-inputs.md#onchange
       // Instead we transition the preset value, which will prevents the suspense bound from triggering its fallback
