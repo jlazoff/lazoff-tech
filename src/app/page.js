@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-black text-white">
      
-      <style jsx global>{`
+      <style>{`
         body {
           font-family: 'Roboto', sans-serif;
         }
