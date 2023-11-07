@@ -1,16 +1,10 @@
-import Head from 'next/head';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-black text-white">
-      <Head>
-        <title>Lazoff Luxury Services</title>
-        <link rel="icon" href="/favicon.ico" />
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
-      </Head>
-
+     
       <style jsx global>{`
         body {
           font-family: 'Roboto', sans-serif;
