@@ -33,7 +33,7 @@ export default function Home() {
 
         <div className="pt-6">
           <a href="https://www.linkedin.com/in/joshua-lazoff/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline flex items-center justify-center">
-            <img src="/Linkedin-Connect.png" className="mr-2" /> Connect on LinkedIn
+            <FontAwesomeIcon icon={faLinkedin} className="mr-2" /> Connect on LinkedIn
           </a>
           <p className="mt-3">Email: <a href="mailto:joshua@lazoff.tech" className="text-gold-500 hover:underline">joshua@lazoff.tech</a></p>
         </div>
