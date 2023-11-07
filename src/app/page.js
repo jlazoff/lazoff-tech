@@ -32,7 +32,7 @@ export default function Home() {
         </div>
 
         <div className="pt-6">
-          <a href="https://www.linkedin.com/in/joshualazoff" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline flex items-center justify-center">
+          <a href="https://www.linkedin.com/in/joshua-lazoff/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline flex items-center justify-center">
             <FontAwesomeIcon icon={faLinkedin} className="mr-2" /> Connect on LinkedIn
           </a>
           <p className="mt-3">Email: <a href="mailto:joshua@lazoff.tech" className="text-gold-500 hover:underline">joshua@lazoff.tech</a></p>
