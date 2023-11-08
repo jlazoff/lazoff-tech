@@ -4,7 +4,7 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-black text-white">
-     
+
       <style>{`
         body {
           font-family: 'Roboto', sans-serif;
@@ -20,20 +20,25 @@ export default function Home() {
         <h1 className="text-3xl sm:text-4xl mb-3 font-bold">
           Crafting Digital Experiences
         </h1>
-    
+
+        <h2></h2>
+        
         <div className="text-left space-y-4">
-          <h2 className="text-md sm:text-lg font-semibold">Our Services</h2>
+          <h3 className="text-md sm:text-lg font-semibold">Our Services</h3>
           <p className="text-gold-500">• Luxury Websites</p>
           <p className="text-gold-500">• Mobile Apps</p>
           <p className="text-gold-500">• Custom Software</p>
         </div>
 
-        <div className="pt-6">
-          <a href="https://www.linkedin.com/in/joshua-lazoff/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline flex items-center justify-center">
-            <FontAwesomeIcon icon={faLinkedin} alt="Linkedin Logo" className="mr-2" /> Connect on LinkedIn
+        <div className="flex justify-center sm:justify-start space-x-3 sm:space-x-4">
+          <a href="https://www.linkedin.com/in/joshua-lazoff/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">
+            <FontAwesomeIcon icon={faLinkedin} className="h-8 w-8 sm:h-10 sm:w-10" alt="LinkedIn Logo" />
           </a>
-          <p className="mt-3">Email: <a href="mailto:joshua&#64;lazoff&#46;tech" className="text-gold-500 hover:underline">joshua&#64;lazoff&#46;tech</a></p>
+          <a href="mailto:joshua@lazoff.tech" className="text-gold-500 hover:text-gold-700">
+            <FontAwesomeIcon icon={faEnvelope} className="h-8 w-8 sm:h-10 sm:w-10" alt="Email Icon" />
+          </a>
         </div>
+
       </main>
     </div>
   )
