@@ -20,11 +20,9 @@ export default function Home() {
         <h1 className="text-3xl sm:text-4xl mb-3 font-bold">
           Crafting Digital Experiences
         </h1>
-
-        <h2></h2>
-        
+     
         <div className="text-left space-y-4">
-          <h3 className="text-md sm:text-lg font-semibold">Our Services</h3>
+          <h2 className="text-md sm:text-lg font-semibold">Our Services</h2>
           <p className="text-gold-500">• Luxury Websites</p>
           <p className="text-gold-500">• Mobile Apps</p>
           <p className="text-gold-500">• Custom Software</p>
@@ -34,11 +32,10 @@ export default function Home() {
           <a href="https://www.linkedin.com/in/joshua-lazoff/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">
             <FontAwesomeIcon icon={faLinkedin} className="h-8 w-8 sm:h-10 sm:w-10" alt="LinkedIn Logo" />
           </a>
-          <a href="mailto:joshua@lazoff.tech" className="text-gold-500 hover:text-gold-700">
+          <a href="mailto:joshua&#64;lazoff&#46;tech" className="text-gold-500 hover:text-gold-700">
             <FontAwesomeIcon icon={faEnvelope} className="h-8 w-8 sm:h-10 sm:w-10" alt="Email Icon" />
           </a>
         </div>
-
       </main>
     </div>
   )
