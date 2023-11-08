@@ -9,7 +9,7 @@ export default function Home() {
         body {
           font-family: 'Roboto', sans-serif;
         }
-        h1, h2 {
+        h1, h2, p {
           font-family: 'Playfair Display', serif;
         }
       `}</style>
@@ -33,7 +33,7 @@ export default function Home() {
             <FontAwesomeIcon icon={faLinkedin} className="h-8 w-8 sm:h-10 sm:w-10" alt="LinkedIn Logo" />
           </a>
           <a href="mailto:joshua&#64;lazoff&#46;tech" className="text-gold-500 hover:text-gold-700">
-            <FontAwesomeIcon icon={faEnvelope} className="h-8 w-8 sm:h-10 sm:w-10" alt="Email Icon" />
+            <FontAwesomeIcon icon={fa-envelope} className="h-8 w-8 sm:h-10 sm:w-10" alt="Email Icon" />
           </a>
         </div>
       </main>
