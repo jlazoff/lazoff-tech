@@ -1,34 +1,35 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-
+import Image from 'next/image';
 
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
 
-      <header className="flex flex-col items-center justify-center flex-1 w-full px-4 space-y-6 text-center sm:px-20">
-        <img src="/LazoffTech-black.svg" alt="Lazoff.Tech Logo" className="my-4 w-100 sm:w-75" />
 
-        <h1 className="mb-3 text-4xl font-bold sm:text-4xl">
+      <header className="flex flex-col items-center justify-center flex-1 w-full px-4 space-y-6 text-center sm:px-20">
+        <Image src="/LazoffTech-black.svg" alt="Lazoff.Tech Logo" className="my-4 w-100vw sm:w-75" width={600} height={100} />
+
+        <h1 className="mb-3 text-3xl font-bold sm:text-3xl">
           Software Engineering &amp; Consulting
         </h1>
 
-        <h2 className="mb-3 text-3xl font-bold sm:text-2xl">
-          Elevating Your Digital Presence
+        <h2 className="mb-2 text-2xl font-bold sm:text-2xl">
+          Elevating your digital presence with innovative technology solutions
         </h2>
 
         <section className="mb-6">
-          <h3 className="my-4 text-3xl underline sm:text-2xl">Our Services:</h3>
+          <h2 className="my-4 text-2xl underline sm:text-2xl">Our Services</h2>
           <ul className="flex flex-col text-left text-center text-mb-2">
             <li className="mb-2">
               <span className="mr-2">&#9679;</span>
-              <strong>Website & Mobile Applications:</strong><br /><span class="text-mb-1">Crafting elegant, user-friendly digital experiences.</span>
+              <strong>Website & Mobile Applications</strong><br /><span class="text-mb-1">Crafting sophisticated, user-friendly digital experiences.</span>
               <br />
             </li>
             <li className="mb-2">
               <span className="mr-2">&#9679;</span>
-              <strong>Custom Software Solutions:</strong><br /><span class="text-mb-1">Tailored technology to fit your unique business needs.</span>
+              <strong>Custom Software Solutions</strong><br /><span class="text-mb-1">Tailoring technology to align with your distinctive business needs.</span>
             </li>
           </ul>
         </section>
