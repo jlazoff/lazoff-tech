@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Lazoff.Tech',
-  description: 'Lazoff.Tech Luxury Websites, Mobile Apps, and Custom Software',
+  description: 'Websites, Mobile Apps, and Custom Software Solutions',
   link: [
     { rel: 'icon', href: '/favicon.ico' },
     {

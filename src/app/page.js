@@ -2,44 +2,46 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
+
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2 text-white bg-black">
+    <div className="flex flex-col items-center justify-center min-h-screen py-2">
 
-      <style>{`
-        body {
-          font-family: 'Roboto', sans-serif;
-        }
-        h1, h2, p {
-          font-family: 'Playfair Display', serif;
-        }
-      `}</style>
+      <header className="flex flex-col items-center justify-center flex-1 w-full px-4 space-y-6 text-center sm:px-20">
+        <img src="/LazoffTech-black.svg" alt="Lazoff.Tech Logo" className="my-4 w-100 sm:w-75" />
 
-      <main className="flex flex-col items-center justify-center flex-1 w-full px-4 space-y-6 text-center sm:px-20">
-        <img src="/Lazoff.svg" alt="Lazoff.Tech Logo" className="w-40 my-6 sm:w-64" />
-        
-        <h1 className="mb-3 text-3xl font-bold sm:text-4xl">
-          Crafting Digital Experiences
-        </h1>
-        
-        <h1 className="mb-3 text-3xl font-bold sm:text-4xl">
+        <h1 className="mb-3 text-4xl font-bold sm:text-4xl">
           Software Engineering &amp; Consulting
         </h1>
 
-        <div className="space-y-4 text-left">
-          <h3 className="font-semibold text-md sm:text-lg">Our Services</h3>
-          <p className="text-gold-500">Websites, Mobile Apps, Custom Software</p>
-        </div>
+        <h2 className="mb-3 text-3xl font-bold sm:text-2xl">
+          Elevating Your Digital Presence
+        </h2>
 
-        <div className="flex justify-center space-x-3 sm:justify-start sm:space-x-4">
+        <section className="mb-6">
+          <h3 className="my-4 text-3xl underline sm:text-2xl">Our Services:</h3>
+          <ul className="flex flex-col text-left text-center text-mb-2">
+            <li className="mb-2">
+              <span className="mr-2">&#9679;</span>
+              <strong>Website & Mobile Applications:</strong><br /><span class="text-mb-1">Crafting elegant, user-friendly digital experiences.</span>
+              <br />
+            </li>
+            <li className="mb-2">
+              <span className="mr-2">&#9679;</span>
+              <strong>Custom Software Solutions:</strong><br /><span class="text-mb-1">Tailored technology to fit your unique business needs.</span>
+            </li>
+          </ul>
+        </section>
+
+        <nav className="flex justify-center space-x-3 sm:justify-start sm:space-x-4">
           <a href="https://www.linkedin.com/in/joshua-lazoff/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">
             <FontAwesomeIcon icon={faLinkedin} className="w-8 h-8 sm:h-10 sm:w-10" alt="LinkedIn Logo" />
           </a>
           <a href="mailto:joshua&#64;lazoff&#46;tech" className="text-gold-500 hover:text-gold-700">
             <FontAwesomeIcon icon={faEnvelope} className="w-8 h-8 sm:h-10 sm:w-10" alt="Email Icon" />
           </a>
-        </div>
-      </main>
+        </nav>
+      </header>
     </div>
   )
 }
