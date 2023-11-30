@@ -12,12 +12,12 @@ export default function Home() {
       
       <div className="relative">
         <img
-          className="dark:hidden my-4 w-100vw sm:w-75"
+          className="my-4 dark:hidden w-100vw sm:w-75"
           src="/LazoffTech-black.svg"
           alt="Lazoff.Tech Dark Logo"
         />
         <img
-          className="hidden dark:block my-4 w-100vw sm:w-75"
+          className="hidden my-4 dark:block w-100vw sm:w-75"
           src="/LazoffTech-white.svg"
           alt="Lazoff.Tech White Logo"
         />
