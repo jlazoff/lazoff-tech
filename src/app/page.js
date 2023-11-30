@@ -11,6 +11,19 @@ export default function Home() {
       <header className="flex flex-col items-center justify-center flex-1 w-full px-4 space-y-6 text-center sm:px-20">
         <Image src="/LazoffTech-black.svg" alt="Lazoff.Tech Logo" className="my-4 w-100vw sm:w-75" width={600} height={100} />
 
+    
+<div className="relative">
+  <img
+    className="dark:hidden"
+    src="/LazoffTech-black.svg"
+    alt="Lazoff.Tech Dark Logo"
+  />
+  <img
+    className="hidden dark:block"
+    src="/LazoffTech-white.svg"
+    alt="Lazoff.Tech White Logo"
+  />
+</div>
         <h1 className="mb-3 text-3xl font-bold sm:text-3xl">
           Software Engineering &amp; Consulting
         </h1>
