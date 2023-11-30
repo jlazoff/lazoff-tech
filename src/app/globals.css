@@ -17,6 +17,18 @@
   }
 }
 
+body[data-theme='light'] {
+  --foreground-rgb: 0, 0, 0; /* Black text */
+  --background-start-rgb: 255, 255, 255; /* White background */
+  --background-end-rgb: 255, 255, 255; /* White background */
+}
+
+body[data-theme='dark'] {
+  --foreground-rgb: 255, 255, 255; /* White text */
+  --background-start-rgb: 0, 0, 0; /* Black background */
+  --background-end-rgb: 0, 0, 0; /* Black background */
+}
+
 body {
   font-family: 'Lato', sans-serif;
   color: rgb(var(--foreground-rgb));

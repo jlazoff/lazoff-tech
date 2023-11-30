@@ -4,9 +4,9 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 
 export default function Home() {
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
-
 
       <header className="flex flex-col items-center justify-center flex-1 w-full px-4 space-y-6 text-center sm:px-20">
         <Image src="/LazoffTech-black.svg" alt="Lazoff.Tech Logo" className="my-4 w-100vw sm:w-75" width={600} height={100} />
@@ -21,7 +21,7 @@ export default function Home() {
 
         <section className="mb-6">
           <h2 className="my-4 text-2xl underline sm:text-2xl">Our Services</h2>
-          <ul className="flex flex-col text-left text-center text-mb-2">
+          <ul className="flex flex-col text-center text-mb-2">
             <li className="mb-2">
               <span className="mr-2">&#9679;</span>
               <strong>Website & Mobile Applications</strong><br /><span class="text-mb-1">Crafting sophisticated, user-friendly digital experiences.</span>
