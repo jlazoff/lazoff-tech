@@ -6,8 +6,8 @@ import Image from 'next/image';
 export default function Home() {
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
-
+    <div className="flex flex-col items-center justify-center min-h-screen py-2 text-black dark:text-white">
+  
       <header className="flex flex-col items-center justify-center flex-1 w-full px-4 space-y-6 text-center sm:px-20">
         <Image src="/LazoffTech-black.svg" alt="Lazoff.Tech Logo" className="my-4 w-100vw sm:w-75" width={600} height={100} />
 
