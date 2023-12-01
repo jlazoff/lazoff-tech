@@ -36,7 +36,7 @@ export default function Home() {
             </li>
             <li className="mb-2">
               <span className="mr-2">&#9679;</span>
-              <strong>Custom Software Solutions</strong><br /><span class="text-mb-1">Tailoring technology for your unique needs.</span>
+              <strong>Custom Software Solutions</strong><br /><span class="text-mb-1">Technology for your unique needs.</span>
             </li>
           </ul>
         </section>
