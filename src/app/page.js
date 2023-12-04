@@ -1,53 +1,79 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import Image from 'next/image';
+import Logo from '@/components/Logo';
+import Particles from '@/components/Particles';
+
+const services = [
+  {
+    title: "Website & Mobile Applications",
+    description: "Crafting user-friendly digital experiences."
+  },
+  {
+    title: "Custom Software Solutions",
+    description: "Technology for your unique needs."
+  }
+];
+
+const contacts = [
+  {
+    name: "LinkedIn",
+    icon: faLinkedin,
+    url: "https://www.linkedin.com/in/joshua-lazoff/",
+    external: true,
+    className: "text-blue-500 hover:text-blue-700",
+  },
+  {
+    name: "Email",
+    icon: faEnvelope,
+    url: "mailto:joshua@lazoff.tech",
+    external: false,
+    className: "text-gold-500 hover:text-gold-700",
+  }
+];
 
 export default function Home() {
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2 text-black dark:text-white">
-  
+    <div className="flex flex-col items-center justify-center min-h-screen py-2 text-light dark:text-dark">
+      <Particles />
       <header className="flex flex-col items-center justify-center flex-1 w-full px-4 space-y-6 text-center sm:px-20">
-      
-      <div className="relative">
-        <img
-          className="my-4 dark:hidden w-100vw sm:w-75"
-          src="/LazoffTech-black.svg"
-          alt="Lazoff.Tech Dark Logo"
-        />
-        <img
-          className="hidden my-4 dark:block w-100vw sm:w-75"
-          src="/LazoffTech-white.svg"
-          alt="Lazoff.Tech White Logo"
-        />
-      </div>
-            
-        <h1 className="mb-3 text-3xl font-bold sm:text-3xl">
+        <Logo />
+
+        <h1 className="my-3 text-2xl font-bold sm:text-3xl">
           Software Engineering
         </h1>
         <section className="mb-6">
-          <h2 className="my-4 text-2xl underline sm:text-2xl">Our Services</h2>
-          <ul className="flex flex-col text-center text-mb-2">
-            <li className="mb-2">
-              <span className="mr-2">&#9679;</span>
-              <strong>Website & Mobile Applications</strong><br /><span class="text-mb-1">Crafting user-friendly digital experiences.</span>
-              <br />
-            </li>
-            <li className="mb-2">
-              <span className="mr-2">&#9679;</span>
-              <strong>Custom Software Solutions</strong><br /><span class="text-mb-1">Technology for your unique needs.</span>
-            </li>
+          <h2 className="my-4 text-xl underline sm:text-2xl">
+            Our Services
+          </h2>
+          <ul className="flex flex-col text-center gap-y-4 text-mb-2">
+            {services.map((service, index) => (
+              <li key={index}>
+                <p className='text-lg sm:text-xl'>
+                  <span className="mr-2">&#9679;</span>
+                  <strong>{service?.title}</strong>
+                </p>
+                <p className="mt-1">
+                  {service?.description}
+                </p>
+              </li>
+            ))}
           </ul>
         </section>
 
         <nav className="flex justify-center space-x-3 sm:justify-start sm:space-x-4">
-          <a href="https://www.linkedin.com/in/joshua-lazoff/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">
-            <FontAwesomeIcon icon={faLinkedin} className="w-8 h-8 sm:h-10 sm:w-10" alt="LinkedIn Logo" />
-          </a>
-          <a href="mailto:joshua&#64;lazoff&#46;tech" className="text-gold-500 hover:text-gold-700">
-            <FontAwesomeIcon icon={faEnvelope} className="w-8 h-8 sm:h-10 sm:w-10" alt="Email Icon" />
-          </a>
+          {contacts.map((contact, index) => (
+            <a
+              href={contact.url}
+              key={index}
+              className={`transition-colors ${contact.className}`}
+              aria-label={contact.name}
+              {...(contact.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+            >
+              <FontAwesomeIcon icon={contact.icon} className="w-8 h-8" alt={contact.name} />
+            </a>
+          ))}
         </nav>
       </header>
     </div>
