@@ -1,6 +1,7 @@
 import { Lato } from 'next/font/google'
 import './globals.css'
 import { SITE_URL } from '@/constants'
+import Script from 'next/script'
 
 const lato = Lato({
   weight: ['100', '300', '400', '700', '900'],
@@ -34,10 +35,40 @@ export const metadata = {
   ],
 }
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      "name": "Lazoff.Tech",
+      "url": SITE_URL
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      "url": SITE_URL,
+      name: "Lazoff.Tech",
+      description: 'Websites, Mobile Apps, and Custom Software Solutions',
+      "inLanguage": "en-US"
+    }
+  ]
+}
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={lato.className}>{children}</body>
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-XTW1L750YS"></Script>
+      <Script id='gtm'>
+        {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-XTW1L750YS');`}
+      </Script>
     </html>
   )
 }
