@@ -35,4 +35,9 @@ body {
   .logo.active > .logo-graphic > * {
     @apply fill-logo-light dark:fill-logo-dark;
   }
+
+  .min-height-screen {
+    min-height: 100svh;
+    min-height: 100vh;
+  }
 }
