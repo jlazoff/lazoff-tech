@@ -35,7 +35,7 @@ const contacts = [
 export default function Home() {
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2 text-light dark:text-dark">
+    <div className="flex flex-col items-center justify-center min-height-screen py-2 text-light dark:text-dark">
       <Particles />
       <header className="flex flex-col items-center justify-center flex-1 w-full px-4 space-y-6 text-center sm:px-20">
         <Logo />

@@ -11,7 +11,7 @@ export default function Logo() {
   }, [])
 
   return (
-    <div className="">
+    <div className="w-full">
       <svg className='logo w-full' ref={svgRef} fill="none" height="100" viewBox="0 0 1158 100" width="1158" xmlns="http://www.w3.org/2000/svg">
         <g className='logo-graphic' fill="currentColor">
           <circle cx="898.5" cy="50.5" r="12.5" className="delay-[200ms]"></circle>
