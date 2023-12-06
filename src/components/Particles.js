@@ -13,7 +13,7 @@ export default function Particles() {
   return (
     <ReactParticles
       id="particles"
-      className='pointer-events-none -z-10'
+      className='pointer-events-none fixed inset-0 -z-10'
       init={particlesInit}
       options={{
         "particles": {
