@@ -1,17 +1,17 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faUserNinja } from '@fortawesome/free-solid-svg-icons';
 import Logo from '@/components/Logo';
 import Particles from '@/components/Particles';
 
 const services = [
   {
-    title: "Website & Mobile Applications",
-    description: "Crafting user-friendly digital experiences."
+    title: "Web & Mobile Apps",
+    description: "User-centric, responsive designs"
   },
   {
-    title: "Custom Software Solutions",
-    description: "Technology for your unique needs."
+    title: "Custom Software",
+    description: "Innovative, business-focused solutions"
   }
 ];
 
@@ -25,10 +25,10 @@ const contacts = [
   },
   {
     name: "Email",
-    icon: faEnvelope,
-    url: "mailto:joshua@lazoff.tech",
-    external: false,
-    className: "text-gold-500 hover:text-gold-700",
+    icon: faUserNinja,
+    url: "https://joshualazoff.com",
+    external: true,
+    className: "dark:text-white-500 light:text-black-500 hover:text-black-700",
   }
 ];
 
@@ -41,7 +41,7 @@ export default function Home() {
         <Logo />
 
         <h1 className="my-3 text-2xl font-bold sm:text-3xl">
-          Software Engineering
+          Software Engineering Expertise
         </h1>
         <section className="mb-6">
           <h2 className="my-4 text-xl underline sm:text-2xl">
