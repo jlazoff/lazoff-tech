@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Lazoff Tech
 
-## Getting Started
+**Lazoff Tech is now part of Digital Twin Pro.**
 
-First, run the development server:
+This website serves as a transitional archive documenting the evolution of Joshua Lazoff's company from traditional software engineering to AI-first research and development.
+
+## Company Evolution
+
+- **2015-2020**: Lazoff Tech founded - Custom software engineering and web development
+- **2021-2023**: AI Exploration - Deep dive into ML, knowledge graphs, and agentic systems
+- **2024-Present**: Digital Twin Pro - Full pivot to AI-first company
+
+## Current Status
+
+This site is maintained as a historical reference and redirect point. All active development and services have moved to:
+
+- **Digital Twin Pro**: https://digitaltwinpro.com
+- **Global Knowledge Graph Network**: https://globalknowledgegraph.com
+
+## Tech Stack
+
+- **Framework**: Next.js 14
+- **Styling**: Tailwind CSS with dark/light mode
+- **Icons**: Font Awesome
+- **Animations**: React Particles
+
+## Design Features
+
+- Responsive card-based layout
+- Dark/light mode toggle (darkMode: 'class')
+- Timeline visualization of company evolution
+- Legacy services archive
+- Multiple CTAs to Digital Twin Pro
+
+## Development
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 to view the site.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Compliance
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This site follows all Digital Twin Pro network standards:
 
-## Learn More
+- No vendor-specific references
+- Professional attribution to Joshua Lazoff
+- Links to Global Knowledge Graph Network
+- Dark/light mode with `darkMode: 'class'`
+- Fully responsive design
+- Unique content (not duplicated from other portfolio sites)
 
-To learn more about Next.js, take a look at the following resources:
+## Contact
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Email**: contact@lazoff.tech
+- **LinkedIn**: https://www.linkedin.com/in/joshua-lazoff/
+- **Current Company**: https://digitaltwinpro.com
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
+© 2025 Lazoff Tech. All rights reserved.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Research and engineering by Joshua Lazoff.

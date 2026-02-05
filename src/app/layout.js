@@ -10,14 +10,14 @@ const lato = Lato({
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
-  title: 'Lazoff.Tech',
-  description: 'Websites, Mobile Apps, and Custom Software Solutions',
+  title: 'Lazoff Tech | Now Part of Digital Twin Pro',
+  description: 'Founded by Joshua Lazoff, Lazoff Tech evolved from traditional software engineering into AI research, culminating in Digital Twin Pro. The AI journey continues.',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: SITE_URL,
-    title: 'Lazoff.Tech',
-    description: 'Websites, Mobile Apps, and Custom Software Solutions',
+    title: 'Lazoff Tech | Now Part of Digital Twin Pro',
+    description: 'Founded by Joshua Lazoff, Lazoff Tech evolved from traditional software engineering into AI research, culminating in Digital Twin Pro.',
     images: [
       {
         url: '/assets/images/cover.png',
@@ -41,15 +41,24 @@ const jsonLd = {
     {
       "@type": "Organization",
       "@id": `${SITE_URL}/#organization`,
-      "name": "Lazoff.Tech",
-      "url": SITE_URL
+      "name": "Lazoff Tech",
+      "url": SITE_URL,
+      "founder": {
+        "@type": "Person",
+        "name": "Joshua Lazoff"
+      },
+      "alumni": {
+        "@type": "Organization",
+        "name": "Digital Twin Pro",
+        "url": "https://digitaltwinpro.com"
+      }
     },
     {
       "@type": "WebSite",
       "@id": `${SITE_URL}/#website`,
       "url": SITE_URL,
-      name: "Lazoff.Tech",
-      description: 'Websites, Mobile Apps, and Custom Software Solutions',
+      name: "Lazoff Tech",
+      description: 'Founded by Joshua Lazoff, Lazoff Tech evolved from traditional software engineering into AI research, culminating in Digital Twin Pro.',
       "inLanguage": "en-US"
     }
   ]
