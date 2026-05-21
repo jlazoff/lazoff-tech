@@ -8,31 +8,31 @@ import Particles from '@/components/Particles';
 
 const timeline = [
   {
-    year: "2015-2020",
-    title: "Lazoff Tech Founded",
-    description: "Custom software engineering and web development for businesses"
+    year: "2015–2020",
+    title: "LazoffTech Founded",
+    description: "Custom software engineering and consulting for enterprise and startups"
   },
   {
-    year: "2021-2023",
-    title: "AI Exploration",
-    description: "Deep dive into machine learning, knowledge graphs, and agentic systems"
+    year: "2021–2023",
+    title: "AI Research",
+    description: "Machine learning, knowledge graphs, and autonomous agent architectures"
   },
   {
-    year: "2024-Present",
+    year: "2024–Present",
     title: "Digital Twin Pro",
-    description: "Full pivot to AI-first company building digital twin platforms and agentic AI"
+    description: "Persistent private AI intelligence — hardware, agents, and knowledge systems"
   }
 ];
 
 const legacyServices = [
   {
-    title: "Web & Mobile Apps",
-    description: "User-centric, responsive designs",
+    title: "Web & Mobile Engineering",
+    description: "Responsive applications built for scale and usability",
     icon: faLightbulb
   },
   {
-    title: "Custom Software",
-    description: "Innovative, business-focused solutions",
+    title: "Enterprise Software",
+    description: "Custom systems for complex business operations",
     icon: faHistory
   }
 ];
@@ -47,8 +47,8 @@ export default function Home() {
         <Logo />
 
         <div className="mt-8 text-center max-w-4xl mx-auto">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Lazoff Tech
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style={{fontFamily: 'var(--font-display), Georgia, serif'}}>
+            LazoffTech
           </h1>
 
           <div className="inline-block px-6 py-3 mb-8 bg-blue-100 dark:bg-blue-900 rounded-full">
@@ -58,8 +58,8 @@ export default function Home() {
           </div>
 
           <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
-            Founded by <a href="https://joshualazoff.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">Joshua Lazoff</a>, Lazoff Tech evolved from traditional software engineering
-            into AI research and development, culminating in the creation of Digital Twin Pro.
+            Founded by <a href="https://joshualazoff.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">Joshua Lazoff</a>. From enterprise software engineering
+            to AI research — now building persistent private intelligence at Digital Twin Pro.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -90,11 +90,11 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <FontAwesomeIcon icon={faRocket} className="w-12 h-12 text-blue-600 dark:text-blue-400 mb-4" />
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Our Evolution
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{fontFamily: 'var(--font-display), Georgia, serif'}}>
+              The Evolution
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-              The journey from traditional software engineering to cutting-edge AI research
+              From software engineering to AI research — a decade of building
             </p>
           </div>
 
@@ -124,11 +124,11 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <FontAwesomeIcon icon={faHistory} className="w-12 h-12 text-slate-600 dark:text-slate-400 mb-4" />
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{fontFamily: 'var(--font-display), Georgia, serif'}}>
               Legacy Services
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-              What Lazoff Tech built before the AI pivot
+              The foundation that preceded the AI pivot
             </p>
           </div>
 
@@ -154,12 +154,12 @@ export default function Home() {
       {/* CTA Section */}
       <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-            Our AI Journey Continues
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6" style={{fontFamily: 'var(--font-display), Georgia, serif'}}>
+            The Work Continues
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Explore the next chapter at Digital Twin Pro, where we&apos;re building
-            the future of agentic AI systems and digital twin platforms.
+            Digital Twin Pro — persistent AI intelligence, purpose-built hardware,
+            and autonomous agents for high-value operators.
           </p>
           <a
             href="https://digitaltwinpro.com"
@@ -215,22 +215,20 @@ export default function Home() {
               joshualazoff.com
             </a>
           </div>
-          <div className="pt-4 space-y-2">
-            <a
-              href="https://digitaltwinpro.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block text-blue-600 dark:text-blue-400 hover:underline font-semibold"
-            >
-              Now: Digital Twin Pro
+          <div className="pt-4 flex flex-wrap gap-4 justify-center text-sm">
+            <a href="https://digitaltwinpro.com" target="_blank" rel="noopener noreferrer"
+              className="text-blue-600 dark:text-blue-400 hover:underline font-semibold">
+              Digital Twin Pro
             </a>
-            <a
-              href="https://globalknowledgegraph.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block text-blue-600 dark:text-blue-400 hover:underline"
-            >
-              Part of the Global Knowledge Graph Network
+            <span className="text-slate-400">·</span>
+            <a href="https://joshualazoff.com" target="_blank" rel="noopener noreferrer"
+              className="text-blue-600 dark:text-blue-400 hover:underline">
+              Joshua Lazoff
+            </a>
+            <span className="text-slate-400">·</span>
+            <a href="https://agentoito.com" target="_blank" rel="noopener noreferrer"
+              className="text-blue-600 dark:text-blue-400 hover:underline">
+              Agentoito Founders
             </a>
           </div>
           <p className="text-sm text-slate-500 dark:text-slate-500 pt-4">

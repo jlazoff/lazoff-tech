@@ -1,11 +1,19 @@
-import { Lato } from 'next/font/google'
+import { Inter, Playfair_Display } from 'next/font/google'
 import './globals.css'
 import { SITE_URL } from '@/constants'
 import Script from 'next/script'
 
-const lato = Lato({
-  weight: ['100', '300', '400', '700', '900'],
-  preload: false,
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-body',
+  display: 'swap',
+})
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['600', '700', '800'],
+  variable: '--font-display',
+  display: 'swap',
 })
 
 export const metadata = {
@@ -28,10 +36,6 @@ export const metadata = {
   },
   link: [
     { rel: 'icon', href: '/favicon.ico' },
-    {
-      rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap',
-    },
   ],
 }
 
@@ -73,7 +77,7 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={lato.className}>{children}</body>
+      <body className={`${inter.variable} ${playfair.variable} ${inter.className}`}>{children}</body>
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-XTW1L750YS"></Script>
       <Script id='gtm'>
         {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-XTW1L750YS');`}

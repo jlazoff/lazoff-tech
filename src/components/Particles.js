@@ -18,14 +18,14 @@ export default function Particles() {
       options={{
         "particles": {
           "number": {
-            "value": 60,
+            "value": 70,
             "density": {
               "enable": true,
-              "value_area": 800
+              "value_area": 900
             }
           },
           "color": {
-            "value": "#777777"
+            "value": "#6688aa"
           },
           "shape": {
             "type": "circle",
@@ -60,8 +60,8 @@ export default function Particles() {
           "line_linked": {
             "enable": true,
             "distance": 150,
-            "color": "#777777",
-            "opacity": 0.4,
+            "color": "#557799",
+            "opacity": 0.25,
             "width": 1
           },
           "move": {
