@@ -18,14 +18,14 @@ const playfair = Playfair_Display({
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
-  title: 'Lazoff Tech | Now Part of Digital Twin Pro',
-  description: 'Founded by Joshua Lazoff, Lazoff Tech evolved from traditional software engineering into AI research, culminating in Digital Twin Pro. The AI journey continues.',
+  title: 'Lazoff Tech — Software Engineering for Companies That Value Craft',
+  description: 'Boutique software engineering since 2016. Goldman Sachs, MetaMask, Digital Twin Pro. A small number of clients. Full attention on every project.',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: SITE_URL,
-    title: 'Lazoff Tech | Now Part of Digital Twin Pro',
-    description: 'Founded by Joshua Lazoff, Lazoff Tech evolved from traditional software engineering into AI research, culminating in Digital Twin Pro.',
+    title: 'Lazoff Tech — Software Engineering for Companies That Value Craft',
+    description: 'Boutique software engineering since 2016. Goldman Sachs, MetaMask, Digital Twin Pro. A small number of clients. Full attention on every project.',
     images: [
       {
         url: '/assets/images/cover.png',
@@ -51,18 +51,14 @@ const jsonLd = {
         "@type": "Person",
         "name": "Joshua Lazoff"
       },
-      "alumni": {
-        "@type": "Organization",
-        "name": "Digital Twin Pro",
-        "url": "https://digitaltwinpro.com"
-      }
+      "description": "Boutique software engineering consultancy since 2016."
     },
     {
       "@type": "WebSite",
       "@id": `${SITE_URL}/#website`,
       "url": SITE_URL,
       name: "Lazoff Tech",
-      description: 'Founded by Joshua Lazoff, Lazoff Tech evolved from traditional software engineering into AI research, culminating in Digital Twin Pro.',
+      description: 'Boutique software engineering since 2016. A small number of clients. Full attention on every project.',
       "inLanguage": "en-US"
     }
   ]

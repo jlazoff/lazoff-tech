@@ -1,70 +1,92 @@
 'use client';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import Logo from '@/components/Logo';
 import Particles from '@/components/Particles';
+import ThemeToggle from '@/components/ThemeToggle';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-white">
-      <a href="#main" className="skip-nav">Skip to content</a>
+      <a href="#main" className="skip-nav">Skip to main content</a>
       <Particles />
 
-      <main id="main" className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6">
-        <div className="text-center max-w-2xl mx-auto">
-          <Logo />
+      {/* Theme toggle */}
+      <div className="fixed top-0 right-0 z-50 px-6 py-4">
+        <ThemeToggle />
+      </div>
 
-          <h1 className="mt-10 text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
-            LazoffTech
+      {/* Single Panel */}
+      <main id="main" className="relative z-10 flex items-center justify-center min-h-screen px-6">
+        <div className="max-w-2xl mx-auto text-center">
+
+          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-10">
+            Lazoff Tech
           </h1>
 
-          <p className="mt-6 text-lg sm:text-xl text-slate-500 dark:text-slate-400" style={{ lineHeight: '1.7' }}>
-            Software engineering for companies that value craft.
-          </p>
+          <div className="space-y-6 text-lg sm:text-xl leading-relaxed text-slate-600 dark:text-slate-300 text-left sm:text-center">
+            <p className="text-slate-800 dark:text-slate-100 font-medium text-xl sm:text-2xl">
+              Software engineering for companies that value craft.
+            </p>
 
-          <p className="mt-8 text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-xl mx-auto" style={{ lineHeight: '1.8' }}>
-            Since 2016, we have built systems for teams that care about getting it right — from trade processing infrastructure to the platforms behind products used by millions.
-          </p>
+            <p>
+              Since 2016, we&apos;ve built systems for teams that care about getting it right
+              &mdash; from trade processing at Goldman Sachs to the infrastructure behind MetaMask.
+            </p>
 
-          <p className="mt-6 text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-xl mx-auto" style={{ lineHeight: '1.8' }}>
-            We work with a small number of clients at a time. Every project gets our full attention.
-          </p>
+            <p>
+              We work with a small number of clients at a time.
+              Every project gets our full attention.
+            </p>
 
-          <p className="mt-6 text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-xl mx-auto" style={{ lineHeight: '1.8' }}>
-            Our current focus is{' '}
-            <a href="https://digitaltwinpro.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">
-              Digital Twin Pro
-            </a>
-            {' '}— private intelligence systems for people who want their business to run effortlessly.
-          </p>
+            <p>
+              Our current focus is{' '}
+              <a
+                href="https://digitaltwinpro.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+              >
+                Digital Twin Pro
+              </a>
+              {' '}&mdash; private intelligence systems
+              for executives who want their business to run itself.
+            </p>
 
-          <p className="mt-10 text-base text-slate-500 dark:text-slate-400">
-            If you need something built well, we should talk.
-          </p>
+            <p className="pt-2">
+              If you need something built well, we should talk.
+            </p>
+          </div>
 
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="mailto:hello@lazoff.tech" className="text-blue-600 dark:text-blue-400 hover:underline font-medium text-lg">
+          <div className="mt-10">
+            <a
+              href="mailto:hello@lazoff.tech"
+              className="text-xl font-medium text-blue-600 dark:text-blue-400 hover:underline"
+            >
               hello@lazoff.tech
             </a>
-            <span className="hidden sm:inline text-slate-300 dark:text-slate-600">·</span>
-            <a href="https://www.linkedin.com/in/joshua-lazoff/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-              <FontAwesomeIcon icon={faLinkedin} className="w-5 h-5" />
-              <span>LinkedIn</span>
-            </a>
           </div>
 
-          <div className="mt-12 pt-8 border-t border-slate-200 dark:border-slate-700">
-            <p className="text-sm text-slate-400 dark:text-slate-500">
-              <a href="https://joshualazoff.com" target="_blank" rel="noopener noreferrer" className="hover:underline">Joshua Lazoff</a>
-              {' · '}Cornell Engineering{' · '}Miami
-            </p>
-            <p className="mt-2 text-xs text-slate-300 dark:text-slate-600">
-              © 2026 LazoffTech
-            </p>
-          </div>
+          <p className="mt-6 text-sm text-slate-400 dark:text-slate-500">
+            Cornell Engineering &middot; Miami
+          </p>
         </div>
       </main>
+
+      {/* Subtle footer links */}
+      <footer className="fixed bottom-0 left-0 right-0 z-10 py-4 text-center">
+        <div className="flex items-center justify-center gap-3 text-xs text-slate-400 dark:text-slate-600">
+          <a href="https://digitaltwinpro.com" target="_blank" rel="noopener noreferrer" className="hover:text-slate-600 dark:hover:text-slate-400 transition-colors">
+            digitaltwinpro.com
+          </a>
+          <span className="opacity-40">|</span>
+          <a href="https://joshualazoff.com" target="_blank" rel="noopener noreferrer" className="hover:text-slate-600 dark:hover:text-slate-400 transition-colors">
+            joshualazoff.com
+          </a>
+          <span className="opacity-40">|</span>
+          <a href="https://agentoito.com" target="_blank" rel="noopener noreferrer" className="hover:text-slate-600 dark:hover:text-slate-400 transition-colors">
+            agentoito.com
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }
