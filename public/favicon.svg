@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <style>
+    .bg { fill: #0f172a; }
+    .letter { fill: #3B82F6; }
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #f0f4f8; }
+      .letter { fill: #1e40af; }
+    }
+  </style>
+  <rect class="bg" width="32" height="32" rx="6"/>
+  <text class="letter" x="6" y="24" font-family="-apple-system,'Inter',system-ui,sans-serif" font-size="16" font-weight="700">L</text>
+  <text class="letter" x="16" y="24" font-family="-apple-system,'Inter',system-ui,sans-serif" font-size="16" font-weight="700">T</text>
+</svg>

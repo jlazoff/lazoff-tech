@@ -49,7 +49,11 @@ export const metadata = {
     images: ['/assets/images/cover.png'],
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', type: 'image/x-icon' },
+    ],
+    apple: '/apple-touch-icon.png',
   },
 }
 
