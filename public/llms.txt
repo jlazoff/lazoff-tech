@@ -1,0 +1,9 @@
+# Lazoff Tech
+> Boutique software engineering for companies that value craft.
+
+## About
+Lazoff Tech has been building systems for teams that care about getting it right since 2016 — from trade processing at Goldman Sachs to the infrastructure behind MetaMask. We work with a small number of clients at a time. Every project gets our full attention.
+
+## Contact
+- Email: hello@lazoff.tech
+- Website: https://lazoff.tech

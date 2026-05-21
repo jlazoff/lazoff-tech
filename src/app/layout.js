@@ -18,13 +18,21 @@ const playfair = Playfair_Display({
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
-  title: 'Lazoff Tech — Software Engineering for Companies That Value Craft',
+  title: 'Lazoff Tech — Software Engineering That Values Craft',
   description: 'Boutique software engineering since 2016. Goldman Sachs, MetaMask, Digital Twin Pro. A small number of clients. Full attention on every project.',
+  alternates: {
+    canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: SITE_URL,
-    title: 'Lazoff Tech — Software Engineering for Companies That Value Craft',
+    siteName: 'Lazoff Tech',
+    title: 'Lazoff Tech — Software Engineering That Values Craft',
     description: 'Boutique software engineering since 2016. Goldman Sachs, MetaMask, Digital Twin Pro. A small number of clients. Full attention on every project.',
     images: [
       {
@@ -34,9 +42,15 @@ export const metadata = {
       },
     ],
   },
-  link: [
-    { rel: 'icon', href: '/favicon.ico' },
-  ],
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Lazoff Tech — Software Engineering That Values Craft',
+    description: 'Boutique software engineering since 2016. Goldman Sachs, MetaMask, Digital Twin Pro.',
+    images: ['/assets/images/cover.png'],
+  },
+  icons: {
+    icon: '/favicon.ico',
+  },
 }
 
 const jsonLd = {
