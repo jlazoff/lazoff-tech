@@ -58,7 +58,7 @@ export default function Home() {
           </div>
 
           <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
-            Founded by Joshua Lazoff, Lazoff Tech evolved from traditional software engineering
+            Founded by <a href="https://joshualazoff.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">Joshua Lazoff</a>, Lazoff Tech evolved from traditional software engineering
             into AI research and development, culminating in the creation of Digital Twin Pro.
           </p>
 
@@ -194,7 +194,25 @@ export default function Home() {
               className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
             >
               <FontAwesomeIcon icon={faLinkedin} className="w-5 h-5" />
-              Joshua Lazoff on LinkedIn
+              LinkedIn
+            </a>
+            <span className="hidden sm:inline text-slate-400">|</span>
+            <a
+              href="https://github.com/jlazoff"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 dark:text-blue-400 hover:underline"
+            >
+              GitHub
+            </a>
+            <span className="hidden sm:inline text-slate-400">|</span>
+            <a
+              href="https://joshualazoff.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 dark:text-blue-400 hover:underline"
+            >
+              joshualazoff.com
             </a>
           </div>
           <div className="pt-4 space-y-2">
@@ -216,7 +234,10 @@ export default function Home() {
             </a>
           </div>
           <p className="text-sm text-slate-500 dark:text-slate-500 pt-4">
-            Research and engineering by Joshua Lazoff
+            Research and engineering by{" "}
+            <a href="https://joshualazoff.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+              Joshua Lazoff
+            </a>
           </p>
         </div>
       </footer>
