@@ -47,8 +47,8 @@ export default function Home() {
               >
                 Digital Twin Pro
               </a>
-              {' '}&mdash; private intelligence systems
-              for executives who want their business to run itself.
+              {' '}&mdash; private intelligence for executives
+              who want their business to run itself.
             </p>
 
             <p className="pt-2">
