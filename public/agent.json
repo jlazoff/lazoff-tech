@@ -1,0 +1,17 @@
+{
+  "name": "lazofftech",
+  "description": "Lazofftech \u2014 a project by Joshua Lazoff.",
+  "version": "1.0.0",
+  "contact": "joshua@lazoff.tech",
+  "capabilities": [],
+  "endpoints": {
+    "base": "https://lazofftech.com",
+    "api": "https://lazofftech.com/api",
+    "openapi": "https://lazofftech.com/.well-known/openapi.json"
+  },
+  "interaction": {
+    "supports_streaming": false,
+    "supports_tool_use": false,
+    "rate_limit_rpm": 60
+  }
+}
