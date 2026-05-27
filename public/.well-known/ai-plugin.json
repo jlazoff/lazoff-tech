@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Lazofftech",
+  "name_for_model": "lazofftech",
+  "description_for_human": "Lazofftech \u2014 a project by Joshua Lazoff.",
+  "description_for_model": "Lazofftech \u2014 a project by Joshua Lazoff.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://founding36.com/.well-known/openapi.json"
+  },
+  "logo_url": "https://lazofftech.com/favicon.ico",
+  "contact_email": "joshua@lazoff.tech",
+  "legal_info_url": "https://lazofftech.com/legal"
+}
